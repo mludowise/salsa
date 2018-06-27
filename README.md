@@ -32,7 +32,7 @@ let myGroup = myView.makeSketchGroup()
 ##### Putting a group into a sketch document and exporting to a salsa file
 ```swift
 // Create a page containing the generated group, and insert it into a Document
-let document = Document(pages: [Page(layers: [myGroup])])
+let document = Document(pages: [Page(name: "page_name", layers: [myGroup])], colors: [], textStyles[])
 
 // Export the document to disk
 try? document.export(fileName: "my_file")
